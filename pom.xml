@@ -16,6 +16,7 @@
 	<groupId>com.Cricket</groupId>
 	<artifactId>RegisterClient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>   <!-- ✅ Added WAR packaging -->
 	<name>RegisterClient</name>
 	<description>Register client service</description>
 
@@ -41,11 +42,12 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-<!--		&lt;!&ndash; Eureka Client &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--		</dependency>-->
+		<!-- Exclude embedded Tomcat so external Tomcat will be used -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- JWT -->
 		<dependency>
