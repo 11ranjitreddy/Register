@@ -41,10 +41,7 @@ public class AuthController {
         return ResponseEntity.ok(userService.login(username,password));
     }
 
-    @GetMapping("/")
-    public ResponseEntity<String> home() {
-        return ResponseEntity.ok("Spring Boot Backend is running!");
-    }
+
 
 
 }
